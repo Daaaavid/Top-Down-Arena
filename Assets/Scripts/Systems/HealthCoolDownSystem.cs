@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
+
+// counts down the invisibility timer when a unit has been hit
+// destroys enemies when they have no more health.
+// resets the game when the player has no more health.
 
 [AlwaysSynchronizeSystem]
 public class HealthCoolDownSystem : ComponentSystem {

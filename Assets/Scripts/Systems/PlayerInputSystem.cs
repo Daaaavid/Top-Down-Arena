@@ -7,7 +7,9 @@ using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
 
-[AlwaysSynchronizeSystem] //no need to wait for this piece of code
+//storing the input from the player and moving the camera with the player.
+
+[AlwaysSynchronizeSystem]
 [UpdateInGroup(typeof(PresentationSystemGroup))]
 public class PlayerInputSystem : JobComponentSystem {
 	protected override JobHandle OnUpdate(JobHandle inputDeps) {

@@ -3,7 +3,8 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
-using Unity.Transforms;
+
+// handles the health increas or gun settings and pickupable destruction when the player hits a pickupable.
 
 public class PickupSystem : JobComponentSystem {
 	private BuildPhysicsWorld buildPhysicsWorld;

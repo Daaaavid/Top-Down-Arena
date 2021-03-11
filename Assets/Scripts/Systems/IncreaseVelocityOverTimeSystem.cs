@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Mathematics;
+
+// increases the velocity of bullets (so they don't come to a standstill)
 
 [AlwaysSynchronizeSystem]
 public class IncreaseVelocityOverTimeSystem : JobComponentSystem {

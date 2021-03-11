@@ -1,8 +1,8 @@
 using Unity.Entities;
-using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
+//Spawns enemies in a circle and pickupables at their spawn positions.
 [AlwaysSynchronizeSystem]
 public class EntitySpawnerSystem : ComponentSystem {
 

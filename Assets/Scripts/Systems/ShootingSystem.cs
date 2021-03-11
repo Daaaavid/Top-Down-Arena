@@ -4,6 +4,8 @@ using Unity.Physics;
 using UnityEngine;
 using Unity.Mathematics;
 
+// spawning bullets
+
 [AlwaysSynchronizeSystem] //no need to wait for this piece of code
 public class ShootingSystem : ComponentSystem {
 	protected override void OnUpdate() {

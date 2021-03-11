@@ -4,9 +4,10 @@ using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Mathematics;
-using Unity.Collections;
-using UnityEngine;
 
+// handles the health damage and bullet destruction when bullets hit units.
+
+[AlwaysSynchronizeSystem]
 public class BulletSystem : JobComponentSystem {
 	private BuildPhysicsWorld buildPhysicsWorld;
 	private StepPhysicsWorld stepPhysicsWorld;
@@ -73,15 +74,5 @@ public class BulletDestroySystem : ComponentSystem {
 					EntityManager.DestroyEntity(entity);
 				}
 			});
-		/*EntityCommandBuffer ecb = new EntityCommandBuffer(Allocator.TempJob);
-		Entities.ForEach((Entity entity, ref BulletTag data) => {
-			if (data.destroyTimer <= 0) {
-				ecb.DestroyEntity(entity);
-			}
-		}).Run();
-
-		ecb.Playback(EntityManager);
-		ecb.Dispose();
-		*/
 	}
 }

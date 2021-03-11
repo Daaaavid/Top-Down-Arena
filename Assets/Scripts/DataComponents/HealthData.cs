@@ -8,5 +8,4 @@ using Unity.Mathematics;
 public struct HealthData : IComponentData {
 	public float health;
 	public float damageCoolDown;
-	//public MeshRenderer[] renderers;
 }

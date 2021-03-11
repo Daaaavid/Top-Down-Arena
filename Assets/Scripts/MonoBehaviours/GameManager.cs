@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.Entities;
-using Unity.Physics;
-using Unity.Mathematics;
-using System;
+
+
+// handles the UI
 
 public class GameManager : MonoBehaviour {
 	public static GameManager main;
@@ -57,6 +55,5 @@ public class GameManager : MonoBehaviour {
 		kills -= (lastKills +1);
 		KillUI();
 		HealthUI(100);
-
 	}
 }

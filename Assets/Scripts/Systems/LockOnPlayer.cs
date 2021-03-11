@@ -4,6 +4,9 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
 
+// Raycasts for the enemies to know wether they can see the player.
+// It works on gameobjects and not on entities.
+
 [UpdateInGroup(typeof(SimulationSystemGroup))]
 public class LockOnPlayer : SystemBase
 {

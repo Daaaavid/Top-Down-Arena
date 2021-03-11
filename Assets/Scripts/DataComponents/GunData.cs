@@ -7,7 +7,7 @@ using Unity.Mathematics;
 [GenerateAuthoringComponent]
 public struct GunData : IComponentData {
 	public int GunType; //0 = pistol, 1 = shotgun
-	public Vector3 localPosition;
+	public Vector3 localPosition; // from where the bullets spawn
 	public float coolDown;
 	public float coolDownTimer;
 }

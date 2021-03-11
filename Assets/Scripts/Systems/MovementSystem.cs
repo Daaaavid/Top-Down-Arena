@@ -3,10 +3,10 @@ using Unity.Mathematics;
 using Unity.Jobs;
 using Unity.Transforms;
 using Unity.Physics;
-using Unity.Physics.Extensions;
 using UnityEngine;
 
-[AlwaysSynchronizeSystem] //no need to wait for this piece of code
+// moves all the units in the direction they want to go.
+[AlwaysSynchronizeSystem]
 [UpdateInGroup(typeof(SimulationSystemGroup))]
 public class MovementSystem : JobComponentSystem {
 	protected override JobHandle OnUpdate(JobHandle inputDeps) {
@@ -21,6 +21,9 @@ public class MovementSystem : JobComponentSystem {
 		return default;
 	}
 }
+
+// rotates all units towards their (fictional) mouse position.
+[AlwaysSynchronizeSystem]
 [UpdateInGroup(typeof(PresentationSystemGroup))]
 public class PlayerRotationSystem : JobComponentSystem {
 	protected override JobHandle OnUpdate(JobHandle inputDeps) {
